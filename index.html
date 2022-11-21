@@ -4,18 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Manipulation</title>
+    <title>
+        DOM Manipulation
+    </title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>
-        What kind of badminton racquet is best fit for you!
-    </h1>
-    <div id="form">
-        <p>What level player are you?</p>
-
-    </div>
-    </div>
+    <h1>Build a Cookie(:!</h1>
+    <section class="form-parent">
+        <form id="form">
+            <div class="form-inputs">
+                <div class="form-input">
+                    <label for="texture">Hard or Soft?</label>
+                    <input type="text" id="texture" class="text-box" required>
+                </div>
+                <div class="form-input">
+                    <label for="type">Dark Chocolate, Strawberry, or Cotton?</label>
+                    <input type="text" id="type" class="text-box" required>
+                </div>
+                <div class="form-input">
+                    <label for="real/fake">Real or Fake?</label>
+                    <input type="text" id="real/fake" class="text-box" required>
+                </div>
+            </div>
+            <div class="hero-form-input">
+                <input type="submit" value="Submit" class="btn">
+            </div>
+        </form>
+    </section>
+    <section class="display" id="display">
+        <!-- <div class="display-card">
+            <img class="display-img" src="https://www.gannett-cdn.com/presto/2019/08/08/USAT/dc1fe9c6-d585-42c4-9c69-e31cc46e4c94-ABBEY_ROAD.JPG?auto=webp&crop=1481,834,x0,y265&format=pjpg&width=1200"/>
+            <h2 class="display-artist">Beatles</h2>
+            <h3 class="display-album">Abbey Road</h3>
+             <button class="remove btn">Remove Album</button>
+        </div> -->
+    </section>
+    <script src="index.js"></script>
 </body>
 
 </html>

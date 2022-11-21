@@ -6,3 +6,7 @@
     height: 100vh;
     text-align: center;
 }
+
+.form-input {
+    margin-bottom: 20px;
+}
