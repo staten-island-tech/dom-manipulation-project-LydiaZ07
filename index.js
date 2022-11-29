@@ -1,27 +1,30 @@
 const DOMSelectors = {
-    button:document.getElementById("btn"),
-    text:document.querySelector("text"),
+  button: document.getElementById("btn"),
     box:document.getElementById("big-black-box"),
-    input1:document.getElementById("input1"),
+    input1: document.getElementById("input1"),
     input2:document.getElementById("input2"),
     input3:document.getElementById("input3"),
-    output:document.getElementById("out"),
-    display:document.getElementById("display")
+    display:document.getElementById("display"),
+    form: document.getElementById("form"),
 };
 
-DOMSelectors.button.addEventListener("submit", function (e) {
+function result(perfectCookie){
+  DOMSelectors.display.insertAdjacentHTML(`beforeend`, `<p> You have created a ${perfectCookie.input1}, ${perfectCookie.input2}, ${perfectCookie.input3}<p>cookie, enjoy!</p>`);
+  console.log(perfectCookie.input1)
+DOMSelectors.input1.value = "";
+DOMSelectors.input2.value = "";
+DOMSelectors.input3.value = "";
+};
+
+DOMSelectors.form.addEventListener("submit", function (e) {
 e.preventDefault(); 
-let input1 = DOMSelectors.input1.value;
-let input2 = DOMSelectors.input2.value;
-let input3 = DOMSelectors.input3.value;
-  result();
+let perfectCookie={};
+perfectCookie.input1= DOMSelectors.input1.value;
+perfectCookie.input2 = DOMSelectors.input2.value;
+perfectCookie.input3 = DOMSelectors.input3.value;
+  result(perfectCookie);
 });
-  function result(){
-    DOMSelectors.display.insertAdjacentHTML(`beforeend`, '<p> You have created a ${input1} ${input2} ${input3} cookie, enjoy!</p>');
-  DOMSelectors.input1.value = "";
-  DOMSelectors.input2.value = "";
-  DOMSelectors.input3.value = "";
-  };
+
 
   // function clear(){
   //   let clear = document.querySelectorAll(".remove");
