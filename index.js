@@ -1,6 +1,5 @@
 const DOMSelectors = {
   button: document.getElementById("btn"),
-    box:document.getElementById("big-black-box"),
     input1: document.getElementById("input1"),
     input2:document.getElementById("input2"),
     input3:document.getElementById("input3"),
@@ -25,13 +24,12 @@ perfectCookie.input1= DOMSelectors.input1.value;
 perfectCookie.input2 = DOMSelectors.input2.value;
 perfectCookie.input3 = DOMSelectors.input3.value;
   result(perfectCookie);
+
+  let bye = document.querySelector(".remove-btn");
+bye.forEach((event) =>
+bye.addEventListener("click", function(){
+event.target.remove();
+}))
+
 });
 
-function clear() {
-  let clear = document.querySelectorAll(".remove-btn");
-  clear.forEach((el) => {
-    el.addEventListener("click", function (el) {
-      this.parentElement.remove();
-    });
-  });
-}
