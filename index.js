@@ -8,9 +8,10 @@ const DOMSelectors = {
 };
 
 function result(perfectCookie){
-  DOMSelectors.display.insertAdjacentHTML(`beforeend`, `<div id=ptext><p> You have created a ${perfectCookie.input1}, ${perfectCookie.input2}, ${perfectCookie.input3} cookie enjoy!</p> </div>
-  <div><button id="bye">Remove Cookie </button>
-  </div>`);
+  DOMSelectors.display.insertAdjacentHTML(`beforeend`, `<div id=parent>
+  <div id=ptext><p> You have created a ${perfectCookie.input1}, ${perfectCookie.input2}, ${perfectCookie.input3} cookie enjoy!</p> </div>
+  <div><button id="now">Remove Cookie </button>
+  </div></div>`);
 DOMSelectors.input1.value = "";
 DOMSelectors.input2.value = "";
 DOMSelectors.input3.value = "";
@@ -26,14 +27,11 @@ perfectCookie.input1= DOMSelectors.input1.value;
 perfectCookie.input2 = DOMSelectors.input2.value;
 perfectCookie.input3 = DOMSelectors.input3.value;
   result(perfectCookie);
+  hi();
 });
 
-const bye = document.getElementById("bye");
-bye.forEach((button)=> 
+const button = document.queSelectorAll("#now");
+// bye.forEach((button)=> 
 button.addEventListener("click", function (){
  /*  const cookie = this.parentElement.parentElement; */
-  console.log("hi")
-  /* cookie.remove(); */
-
-})
-)
+   button.parentElement.remove();});
